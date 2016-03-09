@@ -1,0 +1,108 @@
+$sprite-img: sprite-map("sprites-dir/*.png", $layout: smart)
+
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+// @mixin fullScreen($min:inherit, $max:inherit)
+//   min-width: $min
+//   width: 100%
+//   max-width: $max
+//   height: 100%
+
+
+// @mixin image-with-dimensions($path)
+//   background-image: image-url($path)
+//   width: +image-width($path)
+//   height: +image-height($path)
+
+
+// @mixin bg-fixed($url,$w,$h,$t-indent:-5000px)
+//   background-image: $url
+//   width: $w
+//   height: $h
+//   text-indent: $t-indent
+
+
+// @mixin bg-dynamic($url,$w,$h,$t-indent:-5000px, $pos: center center)
+//   background-image: $url
+//   width: $w
+//   height: $h
+//   text-indent: $t-indent
+//   background-position: $pos
+//   // background-size: cover
+//   background-size: cover
+
+
+@mixin f-HiraKakuW3($size:14px, $space:0.1em)
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif
+  font-size: $size
+  letter-spacing: $space
+
+
+@mixin f-HiraKakuW6($size:14px, $space:0.1em)
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "游ゴシック", YuGothic, "メイリオ", Meiryo, sans-serif
+  font-size: $size
+  letter-spacing: $space
+  font-weight: bold
+
+
+@mixin pc-bg($name)
+  $map: sprite-map("sprites-dir-pc/*.png", $spacing: 20px)
+  $file: sprite-file($map, $name)
+  background-image: sprite-url($map)
+  background-size: sprite-width($map), sprite-height($map)
+  background-repeat: no-repeat
+  width: image-width($file)
+  height: image-height($file)
+  background-position: nth(sprite-position($map,$name), 1) nth(sprite-position($map,$name), 2)
+  text-indent: -119988px
+
+
+@mixin sp-bg($name)
+  $map: sprite-map("sprites-dir-sp/*.png", $spacing: 20px)
+  $file: sprite-file($map, $name)
+  background-image: sprite-url($map)
+  background-size: sprite-width($map)/2, sprite-height($map)/2
+  background-repeat: no-repeat
+  width: image-width($file)/2
+  height: image-height($file)/2
+  background-position: nth(sprite-position($map,$name), 1)/2 nth(sprite-position($map,$name), 2)/2
+  text-indent: -119988px
+
+
+@mixin border-radius($value)
+  border-radius: $value
+  -webkit-border-radius: $value
+  -moz-border-radius: $value
+  overflow: hidden
+  display: inline-block
+
+@mixin graduate-shadow($horizontal, $vertical, $blur, $spread, $color)
+  box-shadow: $horizontal $vertical $blur $spread $color
+  -moz-box-shadow: $horizontal $vertical $blur $spread $color
+  -webkit-box-shadow: $horizontal $vertical $blur $spread $color
+
+@mixin graduate-shadow-inset($horizontal, $vertical, $blur, $spread, $color)
+  box-shadow: $horizontal $vertical $blur $spread $color inset
+  -moz-box-shadow: $horizontal $vertical $blur $spread $color inset
+  -webkit-box-shadow: $horizontal $vertical $blur $spread $color inset
+
+@mixin timer($t:0.2s)
+  -webkit-transition: $t
+  -moz-transform: $t
+  transition: $t
+
+@mixin move($x,$y)
+  -webkit-transform: translate($x,$y)
+  -moz-transform: translate($x,$y)
+  transform: translate($x,$y)
+
+@mixin transform($name)
+  -webkit-transform: $name
+  -moz-transform: $name
+  -ms-transform: $name
+  -o-transform: $name
+  transform: $name

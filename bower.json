@@ -1,0 +1,19 @@
+{
+  "name": "gulp_template",
+  "version": "0.0.0",
+  "authors": [
+    "Kiki"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "greensock": "~1.13.2",
+    "jquery": "1.11.1"
+  }
+}

@@ -1,0 +1,51 @@
+// h1
+//   color: #f00
+// h2
+//   +sprite-replace-text($sprite-img, sample, true)
+
+
+.box
+  position: relative
+  
+// #videoel
+//   -o-transform : scaleX(-1)
+//   -webkit-transform : scaleX(-1)
+//   transform : scaleX(-1)
+//   -ms-filter : fliph /*IE*/
+//   filter : fliph /*IE*/
+
+
+#videoel, #overlay, #image_jpeg, #copy_img
+  display: none
+#overlay
+  position: absolute
+  top: 0px
+  left: 0px
+
+#overlay-area
+  display: none
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  .bg
+    width: 100%
+    height: 100%
+    +opacity(0.9)
+    background-color: #000
+  img
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    margin: auto
+
+article#archive
+  ul
+    +clearfix
+    li
+      float: left
+      margin: 10px
+  

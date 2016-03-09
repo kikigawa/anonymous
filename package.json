@@ -1,0 +1,44 @@
+{
+  "name": "repos",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "~3.8.11"
+  },
+  "devDependencies": {
+    "browser-sync": "~2.5.0",
+    "coffee-loader": "~0.7.2",
+    "coffee-script": "~1.9.0",
+    "del": "~1.1.1",
+    "exports-loader": "^0.6.2",
+    "expose-loader": "~0.6.0",
+    "grunt-webpack": "~1.0.8",
+    "gulp-compass": "~1.2.0",
+    "gulp-copy": "0.0.2",
+    "gulp-data": "~1.2.0",
+    "gulp-jade": "~1.0.0",
+    "gulp-jade-php": "^2.0.0-0",
+    "gulp-plumber": "~0.6.6",
+    "gulp-util": "~3.0.4",
+    "gulp-webpack": "~1.2.0",
+    "gulp-webserver": "~0.9.0",
+    "js-yaml": "~3.4.0",
+    "require-dir": "~0.3.0",
+    "run-sequence": "~1.0.2",
+    "webpack": "~1.5.3",
+    "webpack-dev-server": "~1.7.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kikigawa/gulp.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/kikigawa/gulp/issues"
+  }
+}
