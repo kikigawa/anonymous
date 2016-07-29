@@ -17,8 +17,15 @@ class Top
 
   setEvent: =>  
     $(window).on "load", =>
+      @changeVideoSize()
       @getAnonymous()
-      @Face.startVideo(@pos)
+      @pos()
+      # @Face.startVideo(@pos)
+      
+
+    $(window).on "resize", =>
+      @changeVideoSize()
+
 
     $("#publish").on "click", =>
       
@@ -75,6 +82,14 @@ class Top
       trace id
       @overlay(id)
       # $("#canvas").after("<img src='"+id+"'>")
+
+  changeVideoSize: =>
+    # $("#videoel, #overlay, #canvas").css {
+    #   "width"  : $(window).width()
+    #   "height" : $(window).width() * 3/4 +"px"
+    # }
+    # trace "resize"
+
 
   overlay: (id)=>
     $("#overlay-area").css(
