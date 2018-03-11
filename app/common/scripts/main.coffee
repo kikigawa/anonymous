@@ -9,7 +9,7 @@ module.exports =
   class PC
     constructor: ->
       @Trace = new Trace
-      @Ua = new Ua
+      # @Ua = new Ua
       trace "PC"
 
       page = $("#thispage").attr("page")

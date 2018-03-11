@@ -59,20 +59,22 @@ class Video
   
   #canvasの映像にモザイクかける
   mosaic: (facePos)=>
+    if !facePos then return false
     if !@once
       if facePos then @once = true
     
     p_left   = Math.round(facePos[1][0])
     p_right  = Math.round(facePos[13][0])
     p_top    = if facePos[21][1] > facePos[17][1] then Math.round(facePos[17][1]) else Math.round(facePos[21][1])
-    p_bottom = Math.round(facePos[7][1])
-    # trace p_left+", "+p_right
+    p_bottom = Math.round(facePos[1][1])
+    # p_bottom = Math.round(facePos[7][1])
+
 
     imgData = @ctx.getImageData(0, 0, @canvas.width, @canvas.height)
     if imgData != ''
       dot = 6
-      dotX = Math.round((p_right - p_left)/dot)
-      dotY = Math.round((p_bottom - p_top)/dot)
+      dotX = Math.round((p_right - p_left)/12)
+      dotY = Math.round((p_bottom - p_top)/6)
       adjust = 10
       # 縦
       y = p_top + dotY

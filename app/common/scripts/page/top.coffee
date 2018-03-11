@@ -19,8 +19,8 @@ class Top
     $(window).on "load", =>
       @changeVideoSize()
       @getAnonymous()
-      @pos()
-      # @Face.startVideo(@pos)
+      # @pos()
+      @Face.startVideo(@pos)
       
 
     $(window).on "resize", =>

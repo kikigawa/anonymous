@@ -44,7 +44,7 @@ class Face
     @ctrack.draw @canvasInput
     
     #顔のpositionを渡す
-    # @callback(@ctrack.getCurrentPosition())
+    @callback(@ctrack.getCurrentPosition())
 
     # return 
 
